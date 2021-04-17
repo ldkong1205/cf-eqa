@@ -19,6 +19,4 @@
   </a>
 </p>
 
-# Counterfactual QA
-
 ## About
