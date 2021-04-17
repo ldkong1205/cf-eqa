@@ -1,9 +1,9 @@
 <br />
 <p align="center">
-  <img src="img/logo.png" alt="Logo" width="410" height="80">
+  <img src="img/logo.png">
 
   <p align="center">
-    Counterfactual Question Answering
+  <strong>Counterfactual QA: Eliminating Bias in Question Answering</strong>
   </p>
 </p>
 
