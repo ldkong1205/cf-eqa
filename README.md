@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-  <img src="img/logo.png" alt="Logo" width="510" height="100">
+  <img src="img/logo.png" alt="Logo" width="410" height="80">
 
   <p align="center">
     Counterfactual Question Answering
