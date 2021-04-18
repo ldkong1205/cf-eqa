@@ -3,7 +3,7 @@
   <img src="img/cfqa_logo.png" alt="logo" width="290" height="80">
 
   <p align="center">
-  <strong>Counterfactual QA: Eliminating Bias in Question Answering</strong>
+  <strong>Counterfactual QA: Eliminating Position Bias in Question Answering</strong>
   </p>
 </p>
 
