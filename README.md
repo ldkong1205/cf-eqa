@@ -47,7 +47,7 @@ conda install pytorch==1.5.0 torchvision==0.6.0 cudatoolkit=10.1 -c pytorch
 pip install -r requirements.txt
 ```
 
-Note that Pytorch has to be installed depending on the version of CUDA.
+Note that PyTorch has to be installed depending on the version of CUDA.
 
 ### 2. Dataset
 
