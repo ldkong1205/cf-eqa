@@ -31,7 +31,7 @@
     * [Evaluate a Model](#evaluate-a-model)
 * [Useful Command](#useful-commands)
 * [Acknowledgment](#acknowledgment)
-* [Reference](#acknowledgment)
+* [References](#acknowledgment)
 
 ## Installation
 
@@ -66,7 +66,7 @@ Note that PyTorch has to be installed depending on the version of CUDA.
 Special thanks to the authors of [position-bias][1], [CF-VQA][2], and [SQuAD][3].
 
 
-## Reference
+## References
 
 * Miyoung Ko, Jinhyuk Lee, Hyunjae Kim, Gangwoo Kim, and Jaewoo Kang. "Look at the first sentence: Position bias in question answering," *EMNLP*, 2020.
 * Yulei Niu, Kaihua Tang, Hanwang Zhang, Zhiwu Lu, Xian-Sheng Hua, and Ji-Rong Wen. "Counterfactual VQA: A cause-effect look at language bias." *CVPR*, 2021.
