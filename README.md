@@ -43,7 +43,7 @@ Install `Anaconda` or `Miniconda` distribution based on Python 3+ from their dow
 ```
 bash
 conda create --name cfqa python=3.7
-conda activate cfvqa
+conda activate cfqa
 conda install pytorch==1.5.0 torchvision==0.6.0 cudatoolkit=10.1 -c pytorch
 pip install -r requirements.txt
 ```
