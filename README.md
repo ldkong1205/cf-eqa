@@ -22,6 +22,8 @@
 ## About
 This repository contains the Pytorch implementation of <a href="https://github.com/ldkong1205/cf-eqa/blob/main/paper/CE7455__Project_Final.pdf">Counterfactual QA: Eliminating Bias in Question Answering</a>.
 
+<img src="https://github.com/ldkong1205/cf-eqa/blob/main/img/cf-eqa.png">
+
 ## Content
 
 * [Installation](#installation)
