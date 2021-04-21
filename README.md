@@ -20,7 +20,7 @@
 </p>
 
 ## About
-This repository contains the Pytorch implementation of <a href="">Counterfactual QA: Eliminating Position Bias in Question Answering</a> (NTU CE7455 Final Project).
+This repository contains the Pytorch implementation of <a href="">Counterfactual QA: Eliminating Bias in Question Answering</a>.
 
 ## Content
 
