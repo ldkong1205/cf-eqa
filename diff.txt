@@ -1,0 +1,368 @@
+252a253,254
+> 
+>     # 1st Inference: Get average embedding
+253a256
+>         logger.info("   1st Inference: Compute average embedding")
+266a270,288
+>             _, _ = model(**inputs)
+> 
+>     #model.average_embedding()
+> 
+>     for batch in tqdm(eval_dataloader, desc="Evaluating"):
+>         logger.info("   2nd Inference: Prediction")
+>         model.eval()
+>         batch = tuple(t.to(args.device) for t in batch)
+>         with torch.no_grad():
+>             inputs = {'input_ids':      batch[0],
+>                       'attention_mask': batch[1]
+>                       }
+>             if args.model_type != 'distilbert':
+>                 # XLM don't use segment_ids
+>                 inputs['token_type_ids'] = None if args.model_type == 'xlm' else batch[2]
+>             example_indices = batch[3]
+>             if args.model_type in ['xlnet', 'xlnet_sent', 'xlm', 'xlnet_all_sent']:
+>                 inputs.update({'cls_index': batch[4],
+>                                'p_mask':    batch[5]})
+269a292
+>             ###
+345,348c368,371
+<                                              is_training=not evaluate,
+<                                              version_2_with_negative=args.version_2_with_negative,
+<                                              sent_boundary=args.boundary_path,
+<                                              answer_stat=args.answer_stat_path)
+---
+>                                                    is_training=not evaluate,
+>                                                    version_2_with_negative=args.version_2_with_negative,
+>                                                    sent_boundary=args.boundary_path,
+>                                                    answer_stat=args.answer_stat_path)
+352,353c375,376
+<                                                 is_training=not evaluate,
+<                                                 version_2_with_negative=args.version_2_with_negative)
+---
+>                                                is_training=not evaluate,
+>                                                version_2_with_negative=args.version_2_with_negative)
+356,357c379,381
+<                                                 is_training=not evaluate,
+<                                                 version_2_with_negative=args.version_2_with_negative)
+---
+>                                            is_training=not evaluate,
+>                                            version_2_with_negative=args.version_2_with_negative)
+> 
+360,365c384,389
+<                                                     tokenizer=tokenizer,
+<                                                     max_seq_length=args.max_seq_length,
+<                                                     doc_stride=args.doc_stride,
+<                                                     max_query_length=args.max_query_length,
+<                                                     is_training=not evaluate,
+<                                                     word_stat_path=args.word_stat_path)
+---
+>                                                          tokenizer=tokenizer,
+>                                                          max_seq_length=args.max_seq_length,
+>                                                          doc_stride=args.doc_stride,
+>                                                          max_query_length=args.max_query_length,
+>                                                          is_training=not evaluate,
+>                                                          word_stat_path=args.word_stat_path)
+425,433c449,475
+<     parser.add_argument('--cuda-device', default=0, type=int)
+<     parser.add_argument('--dev_pkl', default='valid_1st.p', type=str)
+<     parser.add_argument('--boundary_path', default='datas/squad/train_sent_boundary.p', type=str)
+<     parser.add_argument('--load_cache', default=False, type=str2bool)
+<     parser.add_argument('--all_bound', default=False, type=str2bool)
+<     parser.add_argument('--answer_stat_path', default='datas/squad/train_answer_stat.p', type=str)
+<     parser.add_argument('--bias_eval', default=False, type=str2bool)
+<     parser.add_argument('--use_word_stat', default=False, type=str2bool)
+<     parser.add_argument('--word_stat_path', default='datas/squad/train_answer_stat_word_2.p', type=str)
+---
+>     parser.add_argument('--cuda-device', 
+>                         default=0, 
+>                         type=int)
+>     parser.add_argument('--dev_pkl', 
+>                         default='valid_1st.p', 
+>                         type=str)
+>     parser.add_argument('--boundary_path', 
+>                         default='datas/squad/train_sent_boundary.p', 
+>                         type=str)
+>     parser.add_argument('--load_cache', 
+>                         default=False, 
+>                         type=str2bool)
+>     parser.add_argument('--all_bound', 
+>                         default=False, 
+>                         type=str2bool)
+>     parser.add_argument('--answer_stat_path', 
+>                         default='datas/squad/train_answer_stat.p', 
+>                         type=str)
+>     parser.add_argument('--bias_eval', 
+>                         default=False, 
+>                         type=str2bool)
+>     parser.add_argument('--use_word_stat', 
+>                         default=False, 
+>                         type=str2bool)
+>     parser.add_argument('--word_stat_path', 
+>                         default='datas/squad/train_answer_stat_word_2.p', 
+>                         type=str)
+436c478,480
+<     parser.add_argument("--train_file", default=None, type=str, 
+---
+>     parser.add_argument("--train_file", 
+>                         default=None, 
+>                         type=str, 
+438c482,485
+<     parser.add_argument("--predict_file", default=None, type=str, required=True,
+---
+>     parser.add_argument("--predict_file", 
+>                         default=None, 
+>                         type=str, 
+>                         required=True,
+440c487,489
+<     parser.add_argument("--dev_file", default=None, type=str,
+---
+>     parser.add_argument("--dev_file", 
+>                         default=None, 
+>                         type=str,
+442c491,494
+<     parser.add_argument("--model_type", default=None, type=str, required=True,
+---
+>     parser.add_argument("--model_type", 
+>                         default=None, 
+>                         type=str, 
+>                         required=True,
+444c496,499
+<     parser.add_argument("--model_name_or_path", default=None, type=str, required=True,
+---
+>     parser.add_argument("--model_name_or_path", 
+>                         default=None, 
+>                         type=str, 
+>                         required=True,
+446c501,504
+<     parser.add_argument("--output_dir", default=None, type=str, required=True,
+---
+>     parser.add_argument("--output_dir", 
+>                         default=None, 
+>                         type=str, 
+>                         required=True,
+450c508,510
+<     parser.add_argument("--config_name", default="", type=str,
+---
+>     parser.add_argument("--config_name", 
+>                         default="", 
+>                         type=str,
+452c512,514
+<     parser.add_argument("--tokenizer_name", default="", type=str,
+---
+>     parser.add_argument("--tokenizer_name", 
+>                         default="", 
+>                         type=str,
+454c516,518
+<     parser.add_argument("--cache_dir", default="", type=str,
+---
+>     parser.add_argument("--cache_dir", 
+>                         default="", 
+>                         type=str,
+456,457c520,521
+< 
+<     parser.add_argument('--version_2_with_negative', action='store_true',
+---
+>     parser.add_argument('--version_2_with_negative', 
+>                         action='store_true',
+459c523,525
+<     parser.add_argument('--null_score_diff_threshold', type=float, default=0.0,
+---
+>     parser.add_argument('--null_score_diff_threshold', 
+>                         type=float, 
+>                         default=0.0,
+461,465c527,534
+< 
+<     parser.add_argument("--max_seq_length", default=384, type=int,
+<                         help="The maximum total input sequence length after WordPiece tokenization. Sequences "
+<                              "longer than this will be truncated, and sequences shorter than this will be padded.")
+<     parser.add_argument("--doc_stride", default=128, type=int,
+---
+>     parser.add_argument("--max_seq_length", 
+>                         default=384, 
+>                         type=int,
+>                         help="The maximum total input sequence length after WordPiece tokenization. "
+>                              "Sequences longer than this will be truncated, and sequences shorter than this will be padded.")
+>     parser.add_argument("--doc_stride", 
+>                         default=128, 
+>                         type=int,
+467c536,538
+<     parser.add_argument("--max_query_length", default=64, type=int,
+---
+>     parser.add_argument("--max_query_length", 
+>                         default=64, 
+>                         type=int,
+470c541,542
+<     parser.add_argument("--do_train", action='store_true',
+---
+>     parser.add_argument("--do_train", 
+>                         action='store_true',
+472c544,545
+<     parser.add_argument("--do_eval", action='store_true',
+---
+>     parser.add_argument("--do_eval", 
+>                         action='store_true',
+474c547,548
+<     parser.add_argument("--evaluate_during_training", action='store_true',
+---
+>     parser.add_argument("--evaluate_during_training", 
+>                         action='store_true',
+476c550,551
+<     parser.add_argument("--do_lower_case", action='store_true',
+---
+>     parser.add_argument("--do_lower_case", 
+>                         action='store_true',
+478,479c553,555
+< 
+<     parser.add_argument("--per_gpu_train_batch_size", default=12, type=int,
+---
+>     parser.add_argument("--per_gpu_train_batch_size", 
+>                         default=12, 
+>                         type=int,
+481c557,559
+<     parser.add_argument("--per_gpu_eval_batch_size", default=12, type=int,
+---
+>     parser.add_argument("--per_gpu_eval_batch_size", 
+>                         default=12, 
+>                         type=int,
+483c561,563
+<     parser.add_argument("--learning_rate", default=3e-5, type=float,
+---
+>     parser.add_argument("--learning_rate", 
+>                         default=3e-5, 
+>                         type=float,
+485c565,567
+<     parser.add_argument('--gradient_accumulation_steps', type=int, default=1,
+---
+>     parser.add_argument('--gradient_accumulation_steps', 
+>                         type=int, 
+>                         default=1,
+487c569,571
+<     parser.add_argument("--weight_decay", default=0.0, type=float,
+---
+>     parser.add_argument("--weight_decay", 
+>                         default=0.0, 
+>                         type=float,
+489c573,575
+<     parser.add_argument("--adam_epsilon", default=1e-8, type=float,
+---
+>     parser.add_argument("--adam_epsilon", 
+>                         default=1e-8, 
+>                         type=float,
+491c577,579
+<     parser.add_argument("--max_grad_norm", default=1.0, type=float,
+---
+>     parser.add_argument("--max_grad_norm", 
+>                         default=1.0, 
+>                         type=float,
+493c581,583
+<     parser.add_argument("--num_train_epochs", default=2.0, type=float,
+---
+>     parser.add_argument("--num_train_epochs", 
+>                         default=2.0, 
+>                         type=float,
+495c585,587
+<     parser.add_argument("--max_steps", default=-1, type=int,
+---
+>     parser.add_argument("--max_steps", 
+>                         default=-1, 
+>                         type=int,
+497c589,591
+<     parser.add_argument("--warmup_steps", default=0, type=int,
+---
+>     parser.add_argument("--warmup_steps", 
+>                         default=0, 
+>                         type=int,
+499c593,595
+<     parser.add_argument("--n_best_size", default=20, type=int,
+---
+>     parser.add_argument("--n_best_size", 
+>                         default=20,
+>                         type=int,
+501c597,599
+<     parser.add_argument("--max_answer_length", default=30, type=int,
+---
+>     parser.add_argument("--max_answer_length", 
+>                         default=30, 
+>                         type=int,
+504c602,603
+<     parser.add_argument("--verbose_logging", action='store_true',
+---
+>     parser.add_argument("--verbose_logging", 
+>                         action='store_true',
+507,508c606,608
+< 
+<     parser.add_argument('--logging_steps', type=int, default=5000,
+---
+>     parser.add_argument('--logging_steps', 
+>                         type=int, 
+>                         default=5000,
+510c610,612
+<     parser.add_argument('--save_steps', type=int, default=100000,
+---
+>     parser.add_argument('--save_steps', 
+>                         type=int, 
+>                         default=100000,
+512c614,615
+<     parser.add_argument("--eval_all_checkpoints", action='store_true',
+---
+>     parser.add_argument("--eval_all_checkpoints", 
+>                         action='store_true',
+514c617,618
+<     parser.add_argument("--no_cuda", action='store_true',
+---
+>     parser.add_argument("--no_cuda", 
+>                         action='store_true',
+516c620,621
+<     parser.add_argument('--overwrite_output_dir', action='store_true',
+---
+>     parser.add_argument('--overwrite_output_dir', 
+>                         action='store_true',
+518c623,624
+<     parser.add_argument('--overwrite_cache', action='store_true',
+---
+>     parser.add_argument('--overwrite_cache', 
+>                         action='store_true',
+520c626,628
+<     parser.add_argument('--seed', type=int, default=42,
+---
+>     parser.add_argument('--seed', 
+>                         type=int, 
+>                         default=42,
+522,523c630,632
+< 
+<     parser.add_argument("--local_rank", type=int, default=-1,
+---
+>     parser.add_argument("--local_rank", 
+>                         type=int, 
+>                         default=-1,
+525c634,635
+<     parser.add_argument('--fp16', action='store_true',
+---
+>     parser.add_argument('--fp16', 
+>                         action='store_true',
+527c637,639
+<     parser.add_argument('--fp16_opt_level', type=str, default='O1',
+---
+>     parser.add_argument('--fp16_opt_level', 
+>                         type=str, 
+>                         default='O1',
+530,531c642,649
+<     parser.add_argument('--server_ip', type=str, default='', help="Can be used for distant debugging.")
+<     parser.add_argument('--server_port', type=str, default='', help="Can be used for distant debugging.")
+---
+>     parser.add_argument('--server_ip', 
+>                         type=str, 
+>                         default='', 
+>                         help="Can be used for distant debugging.")
+>     parser.add_argument('--server_port', 
+>                         type=str, 
+>                         default='', 
+>                         help="Can be used for distant debugging.")
+608c726
+<         '''
+---
+>         
+618c736
+<         '''
+---
+>         
