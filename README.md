@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="">
+  <a href="https://github.com/ldkong1205/cf-eqa/blob/main/paper/CE7455__Project_Final.pdf">
     <img src="https://img.shields.io/badge/Paper-%F0%9F%93%83-blue">
   </a>
   <a href="">
@@ -20,7 +20,7 @@
 </p>
 
 ## About
-This repository contains the Pytorch implementation of <a href="">Counterfactual QA: Eliminating Bias in Question Answering</a>.
+This repository contains the Pytorch implementation of <a href="https://github.com/ldkong1205/cf-eqa/blob/main/paper/CE7455__Project_Final.pdf">Counterfactual QA: Eliminating Bias in Question Answering</a>.
 
 ## Content
 
