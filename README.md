@@ -61,7 +61,10 @@ We adopt SQuAD and its bias subsets from [SQuAD][3] and [position-bias][1].
 		<tr>  
 			<td> <b> Dataset </td>
 			<td> <b> Answer Position </td>
-			<td> <b> Example </td>
+		</tr>
+		<tr>
+			<td> SQuAD-v1.1-train.json </td>
+			<td> Full training set </td>
 		</tr>
 		<tr>
 			<td> SQuAD-train-1st.json </td>
@@ -81,7 +84,11 @@ We adopt SQuAD and its bias subsets from [SQuAD][3] and [position-bias][1].
 		</tr>
 		<tr>
 			<td> SQuAD-train-5th.json </td>
-			<td> Fith Sentence & later </td>
+			<td> Fifth & later sentences  </td>
+		</tr>
+		<tr>
+			<td> SQuAD-v1.1-dev.json </td>
+			<td> Full test set </td>
 		</tr>
 	</tbody>
 </table>
