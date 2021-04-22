@@ -54,7 +54,7 @@ Note that `PyTorch` has to be installed depending on the version of `CUDA`.
 
 ### 2. Dataset
 
-We adopt SQuAD-v1.1 and its bias subsets from [SQuAD][3] and [position-bias][1].
+We adopt `SQuAD-v1.1` and its bias subsets from [SQuAD][3] and [position-bias][1].
 
 <table >
 	<tbody>
@@ -96,26 +96,26 @@ We adopt SQuAD-v1.1 and its bias subsets from [SQuAD][3] and [position-bias][1].
 ## Quick Start
 
 ### 1. Train a Model
-To train Bias Product on the synthetic SQuAD subsets, simply run the following.
+To train Bias Product on the synthetic `SQuAD` subsets, simply run the following.
 
 ```
 sh train.product.sh
 ```
 
-To train Learned-Mixin on the synthetic SQuAD subsets, simply run the following.
+To train Learned-Mixin on the synthetic `SQuAD` subsets, simply run the following.
 
 ```
 sh train.learned_mixin.sh
 ```
 
 ### 2. Evaluate a Model
-To evaluate Bias Product on SQuAD, SQuAD (k=1), and SQuAD (k=2,3,...), simply run the following.
+To evaluate Bias Product on `SQuAD`, `SQuAD (k=1)`, and `SQuAD (k=2,3,...)`, simply run the following.
 
 ```
 sh test.product.sh
 ```
 
-To evaluate Learned-Mixin on SQuAD, SQuAD (k=1), and SQuAD (k=2,3,...), simply run the following.
+To evaluate Learned-Mixin on `SQuAD`, `SQuAD (k=1)`, and `SQuAD (k=2,3,...)`, simply run the following.
 
 ```
 sh test.learned_mixin.sh
