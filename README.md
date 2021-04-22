@@ -40,7 +40,7 @@ This repository contains the Pytorch implementation of <a href="https://github.c
 
 ### 1. Setup and Dependency
 
-Install `Anaconda` or `Miniconda` distribution based on Python 3+ from their downloads' site.
+Install `Anaconda` or `Miniconda` distribution based on `Python 3+` from their downloads' site.
 
 ```
 bash
@@ -50,11 +50,11 @@ conda install pytorch==1.5.0 torchvision==0.6.0 cudatoolkit=10.1 -c pytorch
 pip install -r requirements.txt
 ```
 
-Note that PyTorch has to be installed depending on the version of CUDA.
+Note that `PyTorch` has to be installed depending on the version of `CUDA`.
 
 ### 2. Dataset
 
-We adopt SQuAD and its bias subsets from [SQuAD][3] and [position-bias][1].
+We adopt SQuAD-v1.1 and its bias subsets from [SQuAD][3] and [position-bias][1].
 
 <table >
 	<tbody>
@@ -96,6 +96,11 @@ We adopt SQuAD and its bias subsets from [SQuAD][3] and [position-bias][1].
 ## Quick Start
 
 ### 1. Train a Model
+To train Bias Product on the synthetic SQuAD subsets, simply run the following.
+
+```
+sh train.product.sh
+```
 
 ### 2. Evaluate a Model
 
