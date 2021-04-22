@@ -29,11 +29,11 @@ CF-EQA is proposed to capture and mitigate position bias in extractive QA from t
 ## Content
 
 * [Installation](#installation)
-    * [Setup and Dependency](#1-setup-and-dependencies)
-    * [Datasets](#2-download-datasets)
+    * [Setup and Dependency](#1-setup-and-dependency)
+    * [Datasets](#2-dataset)
 * [Quick Start](#quick-start)
-    * [Train a Model](#train-a-model)
-    * [Evaluate a Model](#evaluate-a-model)
+    * [Train a Model](#1-train-a-model)
+    * [Evaluate a Model](#2-evaluate-a-model)
 * [Useful Command](#useful-commands)
 * [Acknowledgment](#acknowledgment)
 * [References](#acknowledgment)
