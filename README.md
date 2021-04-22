@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-  <img src="img/cf-eqa-logo.png" alt="logo" width="300" height="65">
+  <img src="img/cf-eqa-logo.png" alt="logo" width="300" height="68">
 
   <p align="center">
   <strong>Counterfactual QA: Eliminating Bias in Question Answering</strong>
