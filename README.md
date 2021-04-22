@@ -54,6 +54,37 @@ Note that PyTorch has to be installed depending on the version of CUDA.
 
 ### 2. Dataset
 
+We adopt SQuAD and its bias subsets from [SQuAD][3] and [position-bias][1].
+
+<table >
+	<tbody>
+		<tr>  
+			<td> <b> Dataset </td>
+			<td> <b> Answer Position </td>
+			<td> <b> Example </td>
+		</tr>
+		<tr>
+			<td> SQuAD-train-1st.json </td>
+			<td> First sentence </td>
+		</tr>
+		<tr>
+			<td> SQuAD-train-2nd.json </td>
+			<td> Second sentence </td>
+		</tr>
+		<tr>
+			<td> SQuAD-train-3rd.json </td>
+			<td> Third sentence </td>
+		</tr>
+		<tr>
+			<td> SQuAD-train-4th.json </td>
+			<td> Fourth sentence </td>
+		</tr>
+		<tr>
+			<td> SQuAD-train-5th.json </td>
+			<td> Fith Sentence & later </td>
+		</tr>
+	</tbody>
+</table>
 
 ## Quick Start
 
