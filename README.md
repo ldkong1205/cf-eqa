@@ -102,10 +102,27 @@ To train Bias Product on the synthetic SQuAD subsets, simply run the following.
 sh train.product.sh
 ```
 
-### 2. Evaluate a Model
+To train Learned-Mixin on the synthetic SQuAD subsets, simply run the following.
 
+```
+sh train.learned_mixin.sh
+```
+
+### 2. Evaluate a Model
+To evaluate Bias Product on SQuAD, SQuAD (k=1), and SQuAD (k=2,3,...), simply run the following.
+
+```
+sh test.product.sh
+```
+
+To evaluate Learned-Mixin on SQuAD, SQuAD (k=1), and SQuAD (k=2,3,...), simply run the following.
+
+```
+sh test.learned_mixin.sh
+```
 
 ## Useful Command
+Coming soon.
 
 ## Acknowledge
 
