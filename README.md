@@ -137,6 +137,7 @@ Special thanks to the authors of [position-bias][1], [CF-VQA][2], and [SQuAD][3]
 * Yulei Niu, Kaihua Tang, Hanwang Zhang, Zhiwu Lu, Xian-Sheng Hua, and Ji-Rong Wen. "Counterfactual VQA: A cause-effect look at language bias." *CVPR*, 2021.
 * Pranav Rajpurkar, Jian Zhang, Konstantin Lopyrev, and Percy Liang. "SQuAD: 100,000+ questions for machine comprehension of text," *EMNLP*, 2016.
 * Christopher Clark, Mark Yatskar, and Luke Zettlemoyer. "Don’t take the easy way out: Ensemble based methods for avoiding known dataset biases." *EMNLP*, 2019.
+* Geoffrey E. Hinton. "Training products of experts by minimizing contrastive divergence." *Neural Computation*, 2002.
 * Remi Cadene, Corentin Dancette, Hedi Ben-younes, Matthieu Cord, and Devi Parikh. "RUBi: Reducing unimodal biases for visual question answering," *NeurIPS*, 2019.
 
 
