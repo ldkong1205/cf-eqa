@@ -42,7 +42,7 @@ CF-EQA is proposed to capture and mitigate position bias in extractive QA from t
 
 ### 1. Setup and Dependency
 
-Install `Anaconda` or `Miniconda` distribution based on `Python 3+` from their downloads' site.
+Install `Anaconda` or `Miniconda` distribution based on `Python3+` from their downloads' site.
 
 ```
 bash
