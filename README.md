@@ -20,7 +20,7 @@
 </p>
 
 ## About
-This repository contains the Pytorch implementation of <a href="https://github.com/ldkong1205/cf-eqa/blob/main/paper/CE7455__Project_Final.pdf">Counterfactual QA: Eliminating Bias in Question Answering</a>.
+This repository contains the Pytorch implementation of <a href="https://github.com/ldkong1205/cf-eqa/blob/main/paper/CE7455__Project_Final.pdf">Counterfactual QA: Eliminating Bias in Question Answering</a> (CF-EQA).
 
 CF-EQA is proposed to capture and mitigate position bias in extractive QA from the view of causality theory. Different from the conventional QA or ensemble-based QA frameworks, CF-EQA enables us to capture the answer position bias as the direct causal effect of the passages on answers, and eliminate the bias by subtracting the direct causal effect from the total causal effect.
 
